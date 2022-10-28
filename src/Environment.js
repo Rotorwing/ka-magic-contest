@@ -18,6 +18,7 @@ class Environment{
 
     addToScene = function() {
         // Load scene file from js
+        //BABYLON.SceneLoader.ImportMesh().directLoad(scene, _base64ToArrayBuffer(window.NatureRoomHDv7brokenUVs_converted))
         BABYLON.SceneLoader.ImportMesh("", "", window.NatureRoomHDv7brokenUVs_converted, this.scene, this._onLoad.bind(this));
 
         // Original loader
