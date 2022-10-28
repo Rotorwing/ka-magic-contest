@@ -1,0 +1,18 @@
+{
+    "animate": true,
+    "refreshrate": 3,
+    "uniforms": [
+     {
+         "type": "mat3",
+         "name": "shadowMatrix"
+     }
+ ],
+    "sampler2Ds": [
+     {
+        "sample2Dname": "cameraDepth"
+     },
+     {
+        "sample2Dname": "shadowMap"
+     }
+    ]
+   }

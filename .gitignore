@@ -1,0 +1,6 @@
+.*DS_Store*
+.vscode/
+libs/
+oldBlenderFiles/
+*.blend1
+jsconfig.json
