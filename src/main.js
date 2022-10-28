@@ -6,6 +6,8 @@ const engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engi
 const scene = new BABYLON.Scene(engine);
 const createScene = function () {
 
+    scene.environmentBRDFTexture = new BABYLON.Texture.LoadFromDataString("brdf", _base64ToArrayBuffer(window.BRDF_converted));
+
     // Make the the background white
     scene.clearColor = new BABYLON.Color3(1.0, 1.0, 1.0);
     
