@@ -12,7 +12,8 @@ class Dust{
         //base64ToFile(window.dust_converted).then((e)=>{this.create(e).bind(this)});
     // }
     // create(){
-        this.particles.particleTexture = new BABYLON.Texture(window.dust_converted);
+
+        this.particles.particleTexture = new BABYLON.Texture.LoadFromDataString("dust", _base64ToArrayBuffer(window.dust_converted));
         this.particles.emitter = new BABYLON.Vector3(0, 0.5, 0);
         this.particles.direction1 = new BABYLON.Vector3(0, 0, 0);
         this.particles.direction2 = new BABYLON.Vector3(0, 0, 0);
@@ -71,11 +72,4 @@ class Dust{
         //this.particleBox.visibility = true;
         this.particles.createBoxEmitter(new BABYLON.Vector3(0, 0, 0), new BABYLON.Vector3(0, 0, 0), boundingBox.minimumWorld, boundingBox.maximumWorld);
     }
-}
-
-async function base64ToFile(dataURL) {
-    return (fetch(dataURL)
-        .then(function (result) {
-            return result.arrayBuffer();
-        }));
 }
